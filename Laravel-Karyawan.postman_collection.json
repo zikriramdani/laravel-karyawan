@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "9aa99da0-a34d-4c4d-b7cd-949d3de837f7",
+		"name": "Laravel-Karyawan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8820668"
+	},
+	"item": [
+		{
+			"name": "Karyawan",
+			"item": [
+				{
+					"name": "Create Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "Zikri",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_lahir",
+									"value": "2021-07-12",
+									"type": "text"
+								},
+								{
+									"key": "gaji",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "status_karyawan",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/karyawan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"karyawan"
+							]
+						},
+						"description": "simpan data rooms\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/karyawan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"karyawan"
+							]
+						},
+						"description": "get room"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/karyawan/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"karyawan",
+								"{id}"
+							]
+						},
+						"description": "delete room"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Data",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/karyawan/1?nama=Zikri&tanggal_lahir=2021-07-12&gaji=10000&status_karyawan=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"karyawan",
+								"1"
+							],
+							"query": [
+								{
+									"key": "nama",
+									"value": "Zikri"
+								},
+								{
+									"key": "tanggal_lahir",
+									"value": "2021-07-12"
+								},
+								{
+									"key": "gaji",
+									"value": "10000"
+								},
+								{
+									"key": "status_karyawan",
+									"value": "1"
+								}
+							]
+						},
+						"description": "update room"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
